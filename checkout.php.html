@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа — Urban</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Urban</h1>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="checkout.html">Оформить заказ</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="checkout">
+            <h2>Оформление заказа</h2>
+            <form id="orderForm">
+                <label>Имя:
+                    <input type="text" name="name" required>
+                </label>
+                <label>Телефон:
+                    <input type="tel" name="phone" required>
+                </label>
+                <label>Адрес доставки:
+                    <input type="text" name="address" required>
+                </label>
+                <label>Номер карты:
+                    <input type="text" name="card" required placeholder="XXXX XXXX XXXX XXXX">
+                </label>
+                <button type="submit">Оформить заказ</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Urban — Повседневная мода | Адрес: г. Алматы, ул. Достык, 123</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById('orderForm');
+        form.addEventListener('submit', function(e){
+            e.preventDefault();
+            alert("Спасибо за заказ! Мы свяжемся с вами по указанному номеру.");
+            form.reset();
+        });
+    </script>
+</body>
+</html>
